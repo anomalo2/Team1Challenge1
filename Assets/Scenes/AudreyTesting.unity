@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 98740415e46103c4da3ab7bb864ab17d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -702,13 +702,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860196563}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.499809, y: -0.5001763, z: -0.4970763, w: 0.5029212}
+  m_LocalRotation: {x: -0.5117345, y: -0.49607286, z: -0.47454646, w: 0.5165707}
   m_LocalPosition: {x: 0.7895523, y: -0.06198764, z: -0.053017974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1450062636}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -91.788, y: 59.315002, z: -146.009}
 --- !u!1 &945618214
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2b7c7b8a2e9ee740adb52c07cfda52f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.127
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e2b7c7b8a2e9ee740adb52c07cfda52f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1214,13 +1214,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242210125}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5204592, y: 0.47877958, z: 0.48479936, w: 0.51464736}
+  m_LocalRotation: {x: -0.53934497, y: 0.46309885, z: 0.4825746, w: 0.5116329}
   m_LocalPosition: {x: -0.803249, y: -0.06684613, z: -0.05027175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1486924780}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -92.745, y: 77.08, z: 6.882004}
 --- !u!1 &1450062635
 GameObject:
   m_ObjectHideFlags: 0
