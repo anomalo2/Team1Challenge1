@@ -1,0 +1,1 @@
+- If we ever need passthrough, change skybox to solid color
