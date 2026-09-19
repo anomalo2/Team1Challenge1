@@ -1296,10 +1296,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobitRig
       objectReference: {fileID: 0}
+    - target: {fileID: 3699748020273868157, guid: 0a51344cb32405945b854068c000cd10, type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 652099417}
+    - target: {fileID: 3699748020273868157, guid: 0a51344cb32405945b854068c000cd10, type: 3}
+      propertyPath: xrOrigin
+      value: 
+      objectReference: {fileID: 1591740920}
     - target: {fileID: 5036625518776279793, guid: 0a51344cb32405945b854068c000cd10, type: 3}
       propertyPath: m_Data.m_Target
       value: 
       objectReference: {fileID: 860196564}
+    - target: {fileID: 5922576461166351278, guid: 0a51344cb32405945b854068c000cd10, type: 3}
+      propertyPath: m_Data.m_SourceObjects.m_Item0.transform
+      value: 
+      objectReference: {fileID: 652099417}
     - target: {fileID: 6108713017223993845, guid: 0a51344cb32405945b854068c000cd10, type: 3}
       propertyPath: m_Data.m_Target
       value: 
