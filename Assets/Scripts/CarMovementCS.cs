@@ -1,12 +1,16 @@
 using UnityEngine;
 
-public class DemoMovementScript : MonoBehaviour
+public class CarMovementCS : MonoBehaviour
 {
+    // Reference scene director / synchronizer
+    [SerializeField] private SceneDirectorCS syncDirector;
+
+    // Refrence waypoints for navigation and transversal
     [SerializeField] private GameObject initialPoint;
     [SerializeField] private GameObject stopPoint;
     [SerializeField] private GameObject targetPoint;
 
-    [SerializeField] private float speed = 2.5f;
+    [SerializeField] private float speed = 3f;
     [SerializeField] private int countInit = 1000;
 
 
