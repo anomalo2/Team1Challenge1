@@ -13,4 +13,9 @@ public class Interactions : MonoBehaviour
     {
         
     }
+
+    public void OnSelect()
+    {
+
+    }
 }
