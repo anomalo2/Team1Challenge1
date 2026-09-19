@@ -14,6 +14,6 @@ public class AcptButtonCS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        while( syncDirector.consolePowered == false ) {}
     }
 }

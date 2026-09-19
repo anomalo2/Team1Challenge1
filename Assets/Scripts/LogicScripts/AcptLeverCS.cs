@@ -14,6 +14,7 @@ public class AcptLeverCS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        while( syncDirector.consolePowered == false ) {}
         
     }
 }

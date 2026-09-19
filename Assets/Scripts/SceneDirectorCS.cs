@@ -4,10 +4,10 @@ public class SceneDirectorCS : MonoBehaviour
 {
     // Create a reference slot for your scripts
 
-    [SerializeField] public GameObject CarObject;
-    [SerializeField] private GameObject PointA;
-    [SerializeField] private GameObject PointB;
-    [SerializeField] private GameObject PointC;
+    [SerializeField] private GameObject vehicleObject;
+    [SerializeField] private GameObject pointA;
+    [SerializeField] private GameObject pointB;
+    [SerializeField] private GameObject pointC;
 
     [SerializeField] private OnSwitchCS onSwitch;
     [SerializeField] private AcptLeverCS acptLever;
@@ -15,7 +15,8 @@ public class SceneDirectorCS : MonoBehaviour
     [SerializeField] private AcptButtonCS acptButton;
     [SerializeField] private DenyButtonCS denyButton;
 
-
+    private GameObject vehicleInstance;
+    private CarMovementCS vehicleCS;
 
     public bool consolePowered = false;
     public bool decision = false;
@@ -25,18 +26,34 @@ public class SceneDirectorCS : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //spawnVehicle();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (onSwitch.on_flag == true && consolePowered == false) 
+        { 
+            spawnVehicle(); 
+            consolePowered = true;
+        }
         
+    }
+
+    void spawnVehicle()
+    {
+        // Spawn vehicle at initial scene
+        vehicleInstance = Instantiate(vehicleObject, pointA.transform.position, pointA.transform.rotation);
+
+        // Get spawned instance movement script and initialize waypoints
+        vehicleCS = vehicleInstance.GetComponent<CarMovementCS>();
+        vehicleCS.InitializeObject(pointA, pointB, pointC); 
     }
 
     void getDecision()
     {
-
+        
     }
 
 }

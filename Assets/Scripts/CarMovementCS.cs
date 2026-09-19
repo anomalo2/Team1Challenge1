@@ -11,11 +11,9 @@ public class CarMovementCS : MonoBehaviour
     [SerializeField] private GameObject targetPoint;
 
     [SerializeField] private float speed = 3f;
-    [SerializeField] private int countInit = 1000;
 
 
-    private int waitCount;
-    private bool pause_flag = true;
+    private bool pause_flag = false;
 
     Vector3 targetPosition;
 
@@ -23,8 +21,7 @@ public class CarMovementCS : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() 
     { 
-        waitCount = countInit;
-        initalize_object();
+
     }
 
     // Update is called once per frame
@@ -39,21 +36,25 @@ public class CarMovementCS : MonoBehaviour
             pause_flag = false;             
         }
         
-        if ((targetPosition == stopPoint.transform.position) && (transform.position == targetPosition))
+        if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
+
         {
-            waitCount -= 1;
-            if (waitCount <= 0) { targetPosition = targetPoint.transform.position; }
+            pause_flag = true;
+            while(pause_flag == true) { }        
         }
 
         else if ((targetPosition == targetPoint.transform.position) && (transform.position == targetPosition))
         {
-            waitCount = countInit;
-            initalize_object();
+            
         }
     }
 
-    void initalize_object()
+    public void InitializeObject(GameObject pointA, GameObject pointB, GameObject pointC)
     {
+        initialPoint = pointA;
+        stopPoint = pointB;
+        targetPoint = pointC;
+
         transform.position = initialPoint.transform.position;
         targetPosition = stopPoint.transform.position;
     }
