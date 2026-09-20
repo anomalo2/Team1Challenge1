@@ -3,7 +3,7 @@ using UnityEngine;
 public class DenyLeverAction : MonoBehaviour
 {
     public Animator anim;
-    public Activate activate;
+    public DenyLeverCS activate;
 
     private bool cooldown = true;
 
@@ -54,6 +54,6 @@ public class DenyLeverAction : MonoBehaviour
         cooldown = false;
 
         anim.SetTrigger("pull lever");
-        activate.ActivateAcceptLever();
+        activate.ActivateDenyLever();
     }
 }

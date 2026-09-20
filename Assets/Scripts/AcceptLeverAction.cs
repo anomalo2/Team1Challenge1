@@ -3,7 +3,7 @@ using UnityEngine;
 public class AcceptLeverAction : MonoBehaviour
 {
     [SerializeField] private Animator anim;
-    [SerializeField] private Activate activate;
+    [SerializeField] private AcptLeverCS activate;
 
     private bool cooldown = true;
 

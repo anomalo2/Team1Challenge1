@@ -3,7 +3,7 @@ using UnityEngine;
 public class CarMovementCS : MonoBehaviour
 {
     // Reference scene director / synchronizer
-    [SerializeField] private SceneDirectorCS syncDirector;
+    [SerializeField] private SyncDirectorCS syncDirector;
 
     // Refrence waypoints / positions for navigation and transversal
     [SerializeField] private GameObject initialPoint;
@@ -12,17 +12,16 @@ public class CarMovementCS : MonoBehaviour
 
     [SerializeField] private float speed = 3f;
 
-    private bool pause_flg = false;
     public int id;
 
     Vector3 targetPosition;
-    
+
 
     void Start() 
     {
         // assign id and corresponding model. 
 
-        id = Random.Range(1, 2);
+        id = Random.Range(1, 4);
     }
 
     void Update()
@@ -42,17 +41,7 @@ public class CarMovementCS : MonoBehaviour
             if ((targetPosition == stopPoint.transform.position))
             {
                 syncDirector.arriveNotification();
-                pause_flg = true;
-
-                if (pause_flg == true) 
-                { 
-                    if ( syncDirector.verdict == "accept" ) 
-                    { 
-                        targetPosition = targetPoint.transform.position; 
-                        pause_flg = false;
-                    }
-                }
-            }       
+            }    
             
             // IF arrived at TargetPoint terminate instance.
 
@@ -68,7 +57,7 @@ public class CarMovementCS : MonoBehaviour
     {
         // initialize scene / sync director
 
-        syncDirector = sceneManager.GetComponent<SceneDirectorCS>();
+        syncDirector = sceneManager.GetComponent<SyncDirectorCS>();
 
         // initialize waypoints / poisiton markers for navigation.
 
@@ -80,6 +69,11 @@ public class CarMovementCS : MonoBehaviour
 
         transform.position = initialPoint.transform.position;
         targetPosition = stopPoint.transform.position;
+    }
+
+    public void go()
+    {
+        targetPosition = targetPoint.transform.position; 
     }
 
     public void terminate() { Destroy(gameObject); }

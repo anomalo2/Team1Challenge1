@@ -3,28 +3,22 @@ using UnityEngine;
 public class DenyLeverCS : MonoBehaviour
 {
     // Reference scene director / synchronizer
-    [SerializeField] private SceneDirectorCS syncDirector;
+    [SerializeField] private SyncDirectorCS syncDirector;
 
     public bool select_flg = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    //void Start(){ }
 
-    void Update()
+    public void ActivateDenyLever() 
     {
-        // Wait until console is powered (player clocks in)
-        while( syncDirector.consolePowered == false ) {}
-
-        while( syncDirector.arrived == false ) {}
-    }
-
-    void interacted()
-    {
-        if (select_flg == false) { select_flg = true; }
-        syncDirector.decideNotification();
+        if( syncDirector.consolePowered == true && syncDirector.arrived == true)
+        {
+            if (select_flg == false && syncDirector.decision == false) 
+            { 
+                select_flg = true; 
+                syncDirector.decideNotification();
+            }
+        }
     }
 
     public void reset() { select_flg = false; }

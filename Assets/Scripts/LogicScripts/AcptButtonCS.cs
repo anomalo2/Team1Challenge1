@@ -18,16 +18,16 @@ public class AcptButtonCS : MonoBehaviour
         
     }
 
-    IEnumerator waitValidation()
-    {
+    //IEnumerator waitValidation()
+    //{
         // Wait until console is powered (player clocks in).
 
-        while ( !syncDirector.consolePowered ) { yield return null; }
+        //while ( !syncDirector.consolePowered ) { yield return null; }
 
         // Wait for driver to reach the booth.
 
-        while ( !syncDirector.arrived ) { yield return null; }
-    }
+        //while ( !syncDirector.arrived ) { yield return null; }
+    //}
 
 
     

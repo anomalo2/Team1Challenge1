@@ -3,7 +3,7 @@ using UnityEngine;
 public class SwitchAction : MonoBehaviour
 {
     public Animator anim;
-    public Activate activate;
+    public OnSwitchCS activate;
 
     private bool cooldown = true;
 
@@ -53,6 +53,6 @@ public class SwitchAction : MonoBehaviour
         cooldown = false;
 
         anim.SetTrigger("Press");
-        activate.ActivateAcceptLever();
+        activate.ActivateSwitch();
     }
 }
