@@ -9,9 +9,7 @@ public class DemoMovementScript : MonoBehaviour
     [SerializeField] private float speed = 2.5f;
     [SerializeField] private int countInit = 1000;
 
-
     private int waitCount;
-    private bool pause_flag = true;
 
     Vector3 targetPosition;
 
@@ -28,12 +26,7 @@ public class DemoMovementScript : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         
-        if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
-
-        {
-            transform.position = targetPosition; 
-            pause_flag = false;             
-        }
+        if (Vector3.Distance(transform.position, targetPosition) < 0.01f) { transform.position = targetPosition; }
         
         if ((targetPosition == stopPoint.transform.position) && (transform.position == targetPosition))
         {
