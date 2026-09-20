@@ -13,7 +13,6 @@ public class DenyLeverCS : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Wait until console is powered (player clocks in)
@@ -24,7 +23,7 @@ public class DenyLeverCS : MonoBehaviour
 
     void interacted()
     {
-        select_flg = true;
+        if (select_flg == false) { select_flg = true; }
         syncDirector.decideNotification();
     }
 

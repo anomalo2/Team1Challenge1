@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class DenyButtonCS : MonoBehaviour
@@ -7,13 +8,11 @@ public class DenyButtonCS : MonoBehaviour
 
     public bool select_flg = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Wait until console is powered (player clocks in)
@@ -24,7 +23,7 @@ public class DenyButtonCS : MonoBehaviour
 
     void interacted()
     {
-        select_flg = true;
+        if (select_flg == false) { select_flg = true; }
         syncDirector.decideNotification();
     }
 

@@ -21,7 +21,7 @@ public class SceneDirectorCS : MonoBehaviour
     public bool consolePowered = false;
     public bool arrived = false;
     public bool decision = false;
-    public string verdict = "accept";
+    public string verdict = "";
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,41 +53,78 @@ public class SceneDirectorCS : MonoBehaviour
     void determineFate()
     {
         // IF passage is approved.
-        if ( (acptLever.select_flg == true) || (acptButton.select_flg == true) ) { verdict = "accept"; }
+        if ( (acptLever.select_flg == true) || (acptButton.select_flg == true) ) { acceptCondition(); }
 
         // IF passage is denied.
-        else if ( (denyLever.select_flg == true) || (denyButton.select_flg == true) ) { verdict = "reject"; }
+        else if ( (denyLever.select_flg == true) || (denyButton.select_flg == true) ) { rejectCondition(); }
     }
 
     void acceptCondition()
     {
+        verdict = "accept"; 
+        checkProfile();
+
         reset();
         spawnVehicle();
     }
 
     void rejectCondition()
     {
-        
+        verdict = "reject"; 
+        checkProfile();
+
+        vehicleCS.terminate();
+        reset();
+        spawnVehicle();
+    }
+
+    void checkProfile()
+    {
+        // Check profile of the driver.
+        // IF correct -> cue correct audio and green lighting.
+        // IF incorrect -> cue wrong aduio and red scene lighting.
+
+        // for unwanted /  blacklisted alien
+
+        if ( vehicleCS.id == 0 )
+        {
+            if ( verdict == "reject" ) { return; }  // correct sequence
+
+            else if ( verdict == "accept" ) { return; }  // incorrect sequence
+        }
+
+        // for wanted / permitted aliens
+
+        else 
+        {
+            if ( verdict == "accept" ) { return; }  // correct sequence
+
+            else if ( verdict == "reject" ) { return; }  // incorrect sequence
+        }
     }
 
     void spawnVehicle()
     {
-        // Spawn vehicle at initial scene
+        // Spawn vehicle at initial scene.
+
         vehicleInstance = Instantiate(vehicleObject, pointA.transform.position, pointA.transform.rotation);
 
-        // Get spawned instance movement script and initialize waypoints
+        // Get spawned instance movement script and initialize waypoints.
+
         vehicleCS = vehicleInstance.GetComponent<CarMovementCS>();
         vehicleCS.InitializeObject(pointA, pointB, pointC, gameObject); 
     }
 
     void reset() 
     {
-        // reset logic flags and verdict decision.
+        // Reset logic flags and verdict decision.
+
         arrived = false;
         decision = false;
         verdict = "";
 
-        // call interface element reset functions.
+        // Call interface element reset functions.
+
         acptLever.reset();
         denyLever.reset();
         acptButton.reset();

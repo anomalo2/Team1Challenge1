@@ -11,7 +11,6 @@ public class OnSwitchCS : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() { turnOn(); }
 
-    // Update is called once per frame
     void Update() { }
 
     void turnOn()
@@ -19,7 +18,6 @@ public class OnSwitchCS : MonoBehaviour
         if (on_flg == false) 
         {
             syncDirector.powerNotification();
-            switchObject.transform.rotation = Quaternion.Euler(0f, 0f, 10f); 
             on_flg = true;
         }
     }

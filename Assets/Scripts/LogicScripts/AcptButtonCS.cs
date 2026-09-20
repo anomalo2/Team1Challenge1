@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AcptButtonCS : MonoBehaviour
@@ -7,25 +8,40 @@ public class AcptButtonCS : MonoBehaviour
 
     public bool select_flg = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
+    {
+        //StartCoroutine(waitValidation());
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator waitValidation()
     {
-        // Wait until console is powered (player clocks in)
-        while( syncDirector.consolePowered == false ) {}
+        // Wait until console is powered (player clocks in).
 
-        while( syncDirector.arrived == false ) {}
+        while ( !syncDirector.consolePowered ) { yield return null; }
+
+        // Wait for driver to reach the booth.
+
+        while ( !syncDirector.arrived ) { yield return null; }
     }
+
+
+    
 
     void interacted()
     {
-        select_flg = true;
-        syncDirector.decideNotification();
+        if( syncDirector.consolePowered == true && syncDirector.arrived == true)
+        {
+            if (select_flg == false && syncDirector.decision == false) 
+            { 
+                select_flg = true; 
+            }
+            syncDirector.decideNotification();
+        }
     }
 
     public void reset() { select_flg = false; }
