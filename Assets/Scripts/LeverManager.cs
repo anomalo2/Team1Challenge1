@@ -9,6 +9,11 @@ public class LeverManager : MonoBehaviour
     public Collider AcceptLeverCollider;
     public Collider RejectLeverCollider;
 
+    public Collider leftCollider;
+    public Collider rightCollider;
+
+    private bool acceptCollision = false;
+    private bool rejectCollision = false;
 
     private void Awake()
     {
@@ -24,6 +29,8 @@ public class LeverManager : MonoBehaviour
     {
         // Enable the collider when button is pressed
         if (AcceptLeverCollider != null) AcceptLeverCollider.enabled = true;
+
+    
     }
 
     private void RejectLever(InputAction.CallbackContext context)
