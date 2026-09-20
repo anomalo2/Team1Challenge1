@@ -89,18 +89,38 @@ public class SyncDirectorCS : MonoBehaviour
 
         if ( vehicleCS.id == 1 )
         {
-            if ( verdict == "reject" ) { acptLight.TurnON(); }  // correct sequence
+            // correct sequence
 
-            else if ( verdict == "accept" ) { denyLight.TurnON(); }  // incorrect sequence
+            if ( verdict == "reject" ) 
+            { 
+                acptLight.TurnON(); 
+            }  
+
+            // incorrect sequence
+
+            else if ( verdict == "accept" ) 
+            { 
+                vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, 15f);
+                denyLight.TurnON(); 
+            }  
         }
 
         // for wanted / permitted aliens
 
         else 
         {
-            if ( verdict == "accept" ) { acptLight.TurnON(); }  // correct sequence
+            if ( verdict == "accept" ) 
+            { 
+                vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, -15f);
+                acptLight.TurnON(); 
+            }  
 
-            else if ( verdict == "reject" ) { denyLight.TurnON(); }  // incorrect sequence
+            // incorrect sequence
+
+            else if ( verdict == "reject" ) 
+            { 
+                denyLight.TurnON(); 
+            }
         }
     }
 
