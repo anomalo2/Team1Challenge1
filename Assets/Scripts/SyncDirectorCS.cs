@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SyncDirectorCS : MonoBehaviour
@@ -41,7 +42,7 @@ public class SyncDirectorCS : MonoBehaviour
 
     public void arriveNotification()
     {
-        if ( arrived == false) { arrived = true; }
+        if ( arrived == false) { arrived = true;  acptLight.TurnOFF(); denyLight.TurnOFF(); }
     }
 
     public void decideNotification()
@@ -61,10 +62,12 @@ public class SyncDirectorCS : MonoBehaviour
 
     void acceptCondition()
     {
+        vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, 10f);
+        vehicleCS.go();
+
         verdict = "accept"; 
         checkProfile();
         
-        vehicleCS.go();
         reset();
         spawnVehicle();
     }
@@ -100,7 +103,6 @@ public class SyncDirectorCS : MonoBehaviour
 
             else if ( verdict == "accept" ) 
             { 
-                vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, 15f);
                 denyLight.TurnON(); 
             }  
         }
@@ -111,7 +113,6 @@ public class SyncDirectorCS : MonoBehaviour
         {
             if ( verdict == "accept" ) 
             { 
-                vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, -15f);
                 acptLight.TurnON(); 
             }  
 
