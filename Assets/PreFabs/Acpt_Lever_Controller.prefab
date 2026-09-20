@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabLeft: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   grabRight: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  AcceptLeverCollider: {fileID: 64202952101106476}
+  AcceptLeverCollider: {fileID: 0}
   RejectLeverCollider: {fileID: 0}
   SwitchCollider: {fileID: 0}
 --- !u!1 &4602625094996964647
@@ -282,7 +282,6 @@ GameObject:
   - component: {fileID: 165775416249822915}
   - component: {fileID: 4987170690221159132}
   - component: {fileID: 3848582106088320848}
-  - component: {fileID: 64202952101106476}
   - component: {fileID: 6581465210880131240}
   m_Layer: 0
   m_Name: Lever_Handle
@@ -359,27 +358,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &64202952101106476
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4975288633595473923}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.7
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6581465210880131240
 MonoBehaviour:
   m_ObjectHideFlags: 0

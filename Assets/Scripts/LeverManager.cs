@@ -1,14 +1,17 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class LeverManager : MonoBehaviour
 {
     public InputActionReference grabLeft;
     public InputActionReference grabRight;
 
-    public Collider AcceptLeverCollider;
-    public Collider RejectLeverCollider;
-    public Collider SwitchCollider;
+    public GameObject AcceptLeverCollider;
+    public GameObject RejectLeverCollider;
+    public GameObject SwitchCollider;
+
+    [SerializeField] private float deactivateDelay = 0.1f;
 
     private void Awake()
     {
@@ -16,7 +19,10 @@ public class LeverManager : MonoBehaviour
         grabRight.action.Enable();
 
         grabLeft.action.started += ActivateColliders;
-        grabLeft.action.started += DeActivateColliders;
+        grabLeft.action.canceled += DeActivateColliders;
+
+        grabRight.action.started += ActivateColliders;
+        grabRight.action.canceled += DeActivateColliders;
 
         //grabLeft.action.started += AcceptLever;
         //grabLeft.action.started += RejectLever;
@@ -32,19 +38,60 @@ public class LeverManager : MonoBehaviour
     private void ActivateColliders(InputAction.CallbackContext context)
     {
         // Enable the collider when button is pressed
-        if (AcceptLeverCollider != null) AcceptLeverCollider.enabled = true;
-        if (RejectLeverCollider != null) RejectLeverCollider.enabled = true;
-        if (SwitchCollider != null) SwitchCollider.enabled = true;
+        if (AcceptLeverCollider != null)
+        {
+            AcceptLeverCollider.GetComponent<Collider>().enabled = true;
 
+            AcceptLeverCollider
+                .GetComponent<AcceptLeverAction>()
+                .CheckForExistingCollision();
+        }
+
+        //if (RejectLeverCollider != null) RejectLeverCollider.enabled = true;
+        if (RejectLeverCollider != null)
+        {
+            RejectLeverCollider.GetComponent<Collider>().enabled = true;
+
+            RejectLeverCollider
+                .GetComponent<DenyLeverAction>()
+                .CheckForExistingCollision();
+        }
+
+        //if (SwitchCollider != null) SwitchCollider.enabled = true;
+        if (SwitchCollider != null)
+        {
+            SwitchCollider.GetComponent<Collider>().enabled = true;
+
+            SwitchCollider
+                .GetComponent<SwitchAction>()
+                .CheckForExistingCollision();
+        }
 
     }
 
+    private Coroutine deactivateCoroutine;
     private void DeActivateColliders(InputAction.CallbackContext context)
     {
-        // Enable the collider when button is pressed
-        if (AcceptLeverCollider != null) AcceptLeverCollider.enabled = false;
-        if (RejectLeverCollider != null) RejectLeverCollider.enabled = false;
-        if (SwitchCollider != null) SwitchCollider.enabled = false;
+        if (deactivateCoroutine != null)
+            StopCoroutine(deactivateCoroutine);
+
+        deactivateCoroutine = StartCoroutine(DeactivateAfterDelay());
+    }
+
+    private IEnumerator DeactivateAfterDelay()
+    {
+        yield return new WaitForSeconds(deactivateDelay);
+
+        if (AcceptLeverCollider != null)
+            AcceptLeverCollider.GetComponent<Collider>().enabled = false;
+
+        if (RejectLeverCollider != null)
+            RejectLeverCollider.GetComponent<Collider>().enabled = false;
+
+        if (SwitchCollider != null)
+            SwitchCollider.GetComponent<Collider>().enabled = false;
+
+        deactivateCoroutine = null;
     }
 
 
