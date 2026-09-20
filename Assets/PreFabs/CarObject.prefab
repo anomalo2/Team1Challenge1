@@ -78,7 +78,7 @@ MonoBehaviour:
   stopPoint: {fileID: 0}
   targetPoint: {fileID: 0}
   speed: 3
-  countInit: 1000
+  id: 0
 --- !u!1 &1925440449899275833
 GameObject:
   m_ObjectHideFlags: 0
