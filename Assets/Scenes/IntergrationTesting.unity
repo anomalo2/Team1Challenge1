@@ -1392,7 +1392,9 @@ MonoBehaviour:
   pointC: {fileID: 1550492583}
   onSwitch: {fileID: 6727390003137061956}
   acptLever: {fileID: 6898984049122040377}
+  acptLight: {fileID: 7356357363626752125}
   denyLever: {fileID: 3950646012123886956}
+  denyLight: {fileID: 8770906762435968429}
   consolePowered: 0
   arrived: 0
   decision: 0
@@ -2263,6 +2265,7 @@ GameObject:
   - component: {fileID: 7356357363626752123}
   - component: {fileID: 3603160917409261729}
   - component: {fileID: 7356357363626752124}
+  - component: {fileID: 7356357363626752125}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -3926,6 +3929,7 @@ GameObject:
   - component: {fileID: 1115257360884018055}
   - component: {fileID: 8770906762435968427}
   - component: {fileID: 8770906762435968428}
+  - component: {fileID: 8770906762435968429}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -5149,6 +5153,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5000001
   m_Center: {x: 0, y: 0.0000009536743, z: -0.00000023841858}
+--- !u!114 &7356357363626752125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714812842789429747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2cf3a0fa05b53546a9d47bd66712f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirector: {fileID: 1174792493}
+  onMaterial: {fileID: 2100000, guid: 9a20ec8f4d35c954fbd5c389e8454c0c, type: 2}
+  offMaterial: {fileID: 2100000, guid: d31ee53408ded2643a953b7bdb4dea68, type: 2}
 --- !u!33 &7446916014674756864
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5493,6 +5512,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5000001
   m_Center: {x: -0.0000009536743, y: 0.0000009536743, z: 0.00000023841858}
+--- !u!114 &8770906762435968429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3995204983380064393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e233cc865cfaa4b94b804e11b33b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirector: {fileID: 1174792493}
+  onMaterial: {fileID: 2100000, guid: 038e05c7995733f4ab40fc65b97c4a30, type: 2}
+  offMaterial: {fileID: 2100000, guid: 336b1cbfbdfc9ba4b90c2e3dc00df571, type: 2}
 --- !u!23 &8786316868036681478
 MeshRenderer:
   m_ObjectHideFlags: 0

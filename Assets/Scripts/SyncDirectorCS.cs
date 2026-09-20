@@ -11,7 +11,9 @@ public class SyncDirectorCS : MonoBehaviour
 
     [SerializeField] private OnSwitchCS onSwitch;
     [SerializeField] private AcptLeverCS acptLever;
+    [SerializeField] private AcptLightCS acptLight;
     [SerializeField] private DenyLeverCS denyLever;
+    [SerializeField] private DenyLightCS denyLight;
 
     private GameObject vehicleInstance;
     private CarMovementCS vehicleCS;
@@ -87,18 +89,38 @@ public class SyncDirectorCS : MonoBehaviour
 
         if ( vehicleCS.id == 1 )
         {
-            if ( verdict == "reject" ) { vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, 15f); }  // correct sequence
+            // correct sequence
 
-            else if ( verdict == "accept" ) { vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, -15f); }  // incorrect sequence
+            if ( verdict == "reject" ) 
+            { 
+                acptLight.TurnON(); 
+            }  
+
+            // incorrect sequence
+
+            else if ( verdict == "accept" ) 
+            { 
+                vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, 15f);
+                denyLight.TurnON(); 
+            }  
         }
 
         // for wanted / permitted aliens
 
         else 
         {
-            if ( verdict == "accept" ) { vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, 15f); }  // correct sequence
+            if ( verdict == "accept" ) 
+            { 
+                vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, -15f);
+                acptLight.TurnON(); 
+            }  
 
-            else if ( verdict == "reject" ) { vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, -15f); }  // incorrect sequence
+            // incorrect sequence
+
+            else if ( verdict == "reject" ) 
+            { 
+                denyLight.TurnON(); 
+            }
         }
     }
 
