@@ -21,7 +21,7 @@ public class SceneDirectorCS : MonoBehaviour
     public bool consolePowered = false;
     public bool arrived = false;
     public bool decision = false;
-    public string verdict;
+    public string verdict = "accept";
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,10 +53,21 @@ public class SceneDirectorCS : MonoBehaviour
     void determineFate()
     {
         // IF passage is approved.
-        if ( acptLever.select_flg == true || acptButton.select_flg == true ) { verdict = "yes"; }
+        if ( (acptLever.select_flg == true) || (acptButton.select_flg == true) ) { verdict = "accept"; }
 
         // IF passage is denied.
-        else if ( denyLever.select_flg == true || denyButton.select_flg == true ) { verdict = "no"; }
+        else if ( (denyLever.select_flg == true) || (denyButton.select_flg == true) ) { verdict = "reject"; }
+    }
+
+    void acceptCondition()
+    {
+        reset();
+        spawnVehicle();
+    }
+
+    void rejectCondition()
+    {
+        
     }
 
     void spawnVehicle()
@@ -66,7 +77,7 @@ public class SceneDirectorCS : MonoBehaviour
 
         // Get spawned instance movement script and initialize waypoints
         vehicleCS = vehicleInstance.GetComponent<CarMovementCS>();
-        vehicleCS.InitializeObject(pointA, pointB, pointC); 
+        vehicleCS.InitializeObject(pointA, pointB, pointC, gameObject); 
     }
 
     void reset() 

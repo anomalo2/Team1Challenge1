@@ -31,32 +31,38 @@ public class CarMovementCS : MonoBehaviour
         
         if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
         {
-            if ((targetPosition == stopPoint.transform.position) && (transform.position == targetPosition))
+            // Snap to target position.
+            transform.position = targetPosition; 
+
+            // IF at StopPoint halt until manager gives a verdict.
+            if ((targetPosition == stopPoint.transform.position))
             {
                 syncDirector.arriveNotification();
                 pause_flg = true;
 
-                while (pause_flg == true) 
+                if (pause_flg == true) 
                 { 
-                    if ( syncDirector.verdict == "yes" ) 
+                    if ( syncDirector.verdict == "accept" ) 
                     { 
-                        pause_flg = false; 
-                        targetPosition = targetPoint.transform.position;
+                        targetPosition = targetPoint.transform.position; 
+                        pause_flg = false;
                     }
-
-                    else if ( syncDirector.verdict == "no") {}
                 }
             }       
             
-            else if ((targetPosition == targetPoint.transform.position) && (transform.position == targetPosition))
-            {
+            //else if ((targetPosition == targetPoint.transform.position))
+            //{
                 
-            } 
+            //} 
         }
+
     }
 
-    public void InitializeObject(GameObject pointA, GameObject pointB, GameObject pointC)
+    public void InitializeObject(GameObject pointA, GameObject pointB, GameObject pointC, GameObject sceneManager)
     {
+        // initialize scene / sync director
+        syncDirector = sceneManager.GetComponent<SceneDirectorCS>();
+
         // initialize waypoints / poisiton markers for navigation.
         initialPoint = pointA;
         stopPoint = pointB;
