@@ -19,8 +19,6 @@ public class AcceptLeverAction : MonoBehaviour
 
         foreach (Collider collider in overlaps)
         {
-            Debug.Log("Overlap found: " + collider.tag);
-            Debug.Log("compare: " + collider.CompareTag("Interactable"));
             if (collider.CompareTag("GameController"))
             {
 
@@ -32,7 +30,6 @@ public class AcceptLeverAction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Other enter: " + other.tag);
         if (other.CompareTag("GameController") && cooldown)
         {
             ActivateLever();
@@ -41,7 +38,6 @@ public class AcceptLeverAction : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Other exit: " + other.tag);
         if (other.CompareTag("GameController"))
         {
             cooldown = true;
