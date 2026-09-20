@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class SwitchAlien : MonoBehaviour
 {
+    public GameObject[] alienPreFabs;
+
     public GameObject alien1;
     public GameObject alien2;
     public GameObject car1;
