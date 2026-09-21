@@ -16,6 +16,8 @@ public class SyncDirectorCS : MonoBehaviour
     [SerializeField] private DenyLeverCS denyLever;
     [SerializeField] private DenyLightCS denyLight;
 
+    [SerializeField] private Lase laserVisual;
+
     private GameObject vehicleInstance;
     private CarMovementCS vehicleCS;
 
@@ -51,8 +53,11 @@ public class SyncDirectorCS : MonoBehaviour
 
     public void decideNotification()
     {
-        if ( decision == false ) { decision = true; }
-        determineFate();
+        if ( decision == false ) 
+        { 
+            decision = true; 
+            determineFate();
+        }
     }
 
     void determineFate()
@@ -171,6 +176,7 @@ public class SyncDirectorCS : MonoBehaviour
         // ADD LASER TRIGGER HERE
 
         // EDIT THE WAIT SECONDS so car during the laser animation
+        laserVisual.TriggerLaser();
         yield return new WaitForSeconds(1f);
         vehicleCS.terminate();
 

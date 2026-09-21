@@ -88,7 +88,6 @@ public class CarMovementCS : MonoBehaviour
 
     public void speak(int condition) 
     { 
-        // ADD HEAD TURN TRIGGER HERE
         dialogCS.TriggerDialogue(condition); 
     }
 
