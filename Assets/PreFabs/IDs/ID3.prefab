@@ -383,8 +383,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: An overly organized business traveler who sells office supplies. Confident
-    at first, then increasingly offended as the ICK treats normal behavior as suspicious.
+  m_text: An overly organized business traveler who sells office supplies. However,
+    due to ICK's suspicion of normal behavior he seems less confident.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 70f6284f3f1a8af4a958db92ce5c76c7, type: 2}
   m_sharedMaterial: {fileID: -4966145841346552059, guid: 70f6284f3f1a8af4a958db92ce5c76c7, type: 2}

@@ -233,6 +233,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76057175}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &119985104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5317200761434552902, guid: 32ce921f9ed2e564788b01b6f324a620, type: 3}
+  m_PrefabInstance: {fileID: 9022840347863647013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &153380011
 GameObject:
   m_ObjectHideFlags: 0
@@ -8992,12 +8997,16 @@ PrefabInstance:
       objectReference: {fileID: 1321116235}
     - target: {fileID: 4074418186215585409, guid: 32ce921f9ed2e564788b01b6f324a620, type: 3}
       propertyPath: m_VersionIndex
-      value: 585
+      value: 588
       objectReference: {fileID: 0}
     - target: {fileID: 4527163429933604261, guid: 32ce921f9ed2e564788b01b6f324a620, type: 3}
       propertyPath: m_Name
       value: BarrierBase
       objectReference: {fileID: 0}
+    - target: {fileID: 5462549692481431140, guid: 32ce921f9ed2e564788b01b6f324a620, type: 3}
+      propertyPath: barrier
+      value: 
+      objectReference: {fileID: 119985104}
     - target: {fileID: 5462549692481431140, guid: 32ce921f9ed2e564788b01b6f324a620, type: 3}
       propertyPath: syncDirector
       value: 
