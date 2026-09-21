@@ -1944,6 +1944,7 @@ GameObject:
   - component: {fileID: 2452223002621228232}
   - component: {fileID: 2226571451630212829}
   - component: {fileID: 7452875594758732573}
+  - component: {fileID: 1759788924936710732}
   m_Layer: 0
   m_Name: AlienPreFab1_Normal
   m_TagString: Untagged
@@ -2037,6 +2038,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogScript: {fileID: 1878829294841141922}
+--- !u!95 &1759788924936710732
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442515460285276942}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be1a91167b71a0a45b290397eb707dd7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5562394545421289009
 GameObject:
   m_ObjectHideFlags: 0
