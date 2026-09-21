@@ -5,6 +5,10 @@ public class CarMovementCS : MonoBehaviour
     // Reference scene director / synchronizer
     [SerializeField] private SyncDirectorCS syncDirector;
 
+    // Reference for alein and car models
+    [SerializeField] private GameObject[] alienModel; 
+    [SerializeField] private DialogActor dialogCS;
+
     // Refrence waypoints / positions for navigation and transversal
     [SerializeField] private GameObject initialPoint;
     [SerializeField] private GameObject stopPoint;
@@ -18,10 +22,8 @@ public class CarMovementCS : MonoBehaviour
 
 
     void Start() 
-    {
-        // assign id and corresponding model. 
-
-        id = Random.Range(1, 4);
+    { 
+        InitializeModel();
     }
 
     void Update()
@@ -40,7 +42,8 @@ public class CarMovementCS : MonoBehaviour
 
             if ((targetPosition == stopPoint.transform.position))
             {
-                syncDirector.arriveNotification();
+                speak(0);
+                if ( !isSpeaking() ) { syncDirector.arriveNotification(); }
             }    
             
             // IF arrived at TargetPoint terminate instance.
@@ -71,10 +74,20 @@ public class CarMovementCS : MonoBehaviour
         targetPosition = stopPoint.transform.position;
     }
 
-    public void go()
+    public void InitializeModel()
     {
-        targetPosition = targetPoint.transform.position; 
+        // assign id and corresponding model.
+
+        id = Random.Range(0, alienModel.Length);
+        alienModel[id].SetActive(true);
+        dialogCS = alienModel[id].GetComponent<AlienAssets>().dialogScript;
     }
+
+    public bool isSpeaking() { return dialogCS.isTaliking; }
+
+    public void speak(int condition) { dialogCS.TriggerDialogue(condition); }
+
+    public void go() { targetPosition = targetPoint.transform.position; }
 
     public void terminate() { Destroy(gameObject); }
 

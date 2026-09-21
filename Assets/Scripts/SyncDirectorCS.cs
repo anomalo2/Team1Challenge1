@@ -19,10 +19,14 @@ public class SyncDirectorCS : MonoBehaviour
     private GameObject vehicleInstance;
     private CarMovementCS vehicleCS;
 
+    private Coroutine pauseCoroutine;
+    private int count_max = 10;
+
     public bool consolePowered = false;
     public bool arrived = false;
     public bool decision = false;
     public string verdict = "";
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -62,25 +66,15 @@ public class SyncDirectorCS : MonoBehaviour
 
     void acceptCondition()
     {
-        vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, 10f);
-        vehicleCS.go();
-
-        verdict = "accept"; 
-        checkProfile();
-        
-        reset();
-        spawnVehicle();
+        StartCoroutine(acceptSequence());
     }
 
     void rejectCondition()
     {
-        verdict = "reject"; 
-        checkProfile();
-
-        vehicleCS.terminate();
-        reset();
-        spawnVehicle();
+        StartCoroutine(rejectSequence());
+        vehicleCS.speak(2);
     }
+
 
     void checkProfile()
     {
@@ -90,7 +84,7 @@ public class SyncDirectorCS : MonoBehaviour
 
         // for unwanted /  blacklisted alien
 
-        if ( vehicleCS.id == 1 )
+        if ( vehicleCS.id == 0 )
         {
             // correct sequence
 
@@ -149,5 +143,39 @@ public class SyncDirectorCS : MonoBehaviour
 
         acptLever.reset();
         denyLever.reset();
+    }
+
+    IEnumerator acceptSequence()
+    {
+
+        vehicleCS.speak(1);
+        while( vehicleCS.isSpeaking() ) { yield return null;  }
+        
+        yield return new WaitForSeconds(3f);
+
+        vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, 7.5f);
+        vehicleCS.go();
+
+        verdict = "accept"; 
+        checkProfile();
+        
+        reset();
+        spawnVehicle();
+    }
+
+
+    IEnumerator rejectSequence()
+    {
+        vehicleCS.speak(1);
+        while( vehicleCS.isSpeaking() ) { yield return null;  }
+
+        yield return new WaitForSeconds(3f);
+        vehicleCS.terminate();
+
+        verdict = "reject"; 
+        checkProfile();
+
+        reset();
+        spawnVehicle();
     }
 }

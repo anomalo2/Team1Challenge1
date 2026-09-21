@@ -9,14 +9,15 @@ public class DialogActor : MonoBehaviour
     public Dialogue deny;
 
     public TMP_Text dialogueText;
+    public bool isTaliking = false;
 
     private Coroutine dialogueCoroutine;
 
-    //public void Start()
-    //{
-    //    // DONT LEAVE THIS
-    //    TriggerDialogue(0); // example
-    //}
+    public void Start()
+    {
+        // DONT LEAVE THIS
+        //TriggerDialogue(0); // example
+    }
 
     public void TriggerDialogue(int diaNum)
     {
@@ -31,8 +32,10 @@ public class DialogActor : MonoBehaviour
 
         if (dialogue != null) 
         { 
+            isTaliking = true;
             dialogueCoroutine = StartCoroutine(PlayDialogue(dialogue));
         }
+
     }
 
     private IEnumerator PlayDialogue(Dialogue dialogue)
@@ -46,5 +49,6 @@ public class DialogActor : MonoBehaviour
 
         dialogueText.text = "";
         dialogueCoroutine = null;
+        isTaliking = true;
     }
 }
