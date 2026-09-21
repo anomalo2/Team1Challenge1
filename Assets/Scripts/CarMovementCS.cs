@@ -85,7 +85,7 @@ public class CarMovementCS : MonoBehaviour
 
     public bool isSpeaking()
     {
-        if (dialogCs.isTalking == true ) { return true; }
+        if (dialogCS.isTalking == true ) { return true; }
 
         else { return false; }
     }
