@@ -2614,15 +2614,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normal:
     lines:
-    - sentence: Good afternoon
+    - sentence: Howdy
       duration: 3
   accept:
     lines:
-    - sentence: yipee
+    - sentence: Yee Haw
       duration: 3
   deny:
     lines:
-    - sentence: aww
+    - sentence: Dag Nabbit
       duration: 3
   dialogueText: {fileID: 8477630229210991727}
   isTalking: 0

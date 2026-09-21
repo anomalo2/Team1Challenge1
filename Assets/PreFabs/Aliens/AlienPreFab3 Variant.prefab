@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: deny.lines.Array.data[0].sentence
+      value: Well Goodbye
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: accept.lines.Array.data[0].sentence
+      value: Thank You
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: normal.lines.Array.data[0].sentence
+      value: Good Afternoon
+      objectReference: {fileID: 0}
     - target: {fileID: 2226571451630212829, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -137,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b154be6a30fed424baa71a035293659f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog_script: {fileID: 0}
+  dialogScript: {fileID: 0}
 --- !u!114 &6644488699804653872 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
