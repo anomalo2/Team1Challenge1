@@ -43,7 +43,7 @@ public class CarMovementCS : MonoBehaviour
             if ((targetPosition == stopPoint.transform.position))
             {
                 speak(0);
-                if (isSpeaking == false) { syncDirector.arriveNotification(); }
+                if ( !isSpeaking() ) { syncDirector.arriveNotification(); }
             }    
             
             // IF arrived at TargetPoint terminate instance.
@@ -83,12 +83,7 @@ public class CarMovementCS : MonoBehaviour
         dialogCS = alienModel[id].GetComponent<AlienAssets>().dialogScript;
     }
 
-    public bool isSpeaking()
-    {
-        if (dialogCS.isTalking == true ) { return true; }
-
-        else { return false; }
-    }
+    public bool isSpeaking() { return dialogCS.isTaliking; }
 
     public void speak(int condition) { dialogCS.TriggerDialogue(condition); }
 
