@@ -1113,6 +1113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2362505275387652403}
   - component: {fileID: 9037281925935952473}
+  - component: {fileID: 5795642482003095479}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1158,9 +1159,9 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 24604c6905a47544b90397df1435c2ff, type: 2}
+  - {fileID: 2100000, guid: 9535dfc656a102d4d80e9f700fa08bbc, type: 2}
   - {fileID: 2504516506940294678, guid: d6a4bd821815c91469cd73ce6a1d80aa, type: 3}
-  - {fileID: -6478536213147159724, guid: d6a4bd821815c91469cd73ce6a1d80aa, type: 3}
+  - {fileID: 2100000, guid: 2db3517c9d848b94e87b14ea53bd55a1, type: 2}
   - {fileID: 2100000, guid: 440fd222f0e73a249aae6b772da00e65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1266,12 +1267,34 @@ SkinnedMeshRenderer:
   - 0
   - 0
   - 0
-  - 100
+  - 0
   m_RootBone: {fileID: 1884317316165560443}
   m_AABB:
     m_Center: {x: -0.011569768, y: 0.22408491, z: -0.019587189}
     m_Extent: {x: 0.2614634, y: 0.29486305, z: 0.23520446}
   m_DirtyAABB: 0
+--- !u!95 &5795642482003095479
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744823061115623603}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: daee43ea39af3fa41b40642d2b621d4b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2969999572886890811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,7 +1968,7 @@ GameObject:
   - component: {fileID: 2226571451630212829}
   - component: {fileID: 7452875594758732573}
   m_Layer: 0
-  m_Name: AlienPreFab2
+  m_Name: AlienPreFab1_Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1999,10 +2022,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c72abb0a4b476b44a1f29513d8360a2, type: 2}
+  - {fileID: 2100000, guid: d84681f57598fd9448c3b8bb0815f818, type: 2}
   - {fileID: 8473809130601244647, guid: 1cb1a84042acc724493842d711727eb8, type: 3}
   - {fileID: -3610077728683189209, guid: 1cb1a84042acc724493842d711727eb8, type: 3}
-  - {fileID: 2100000, guid: df9500fac53aeb5448a1eddcd2a0685b, type: 2}
+  - {fileID: 2100000, guid: 70143511c50ae434cae5a156f1bda5a4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2294,8 +2317,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fbe988a3eef48824d920563296561205, type: 2}
-  - {fileID: 2100000, guid: 4d743ec3442cac34bae9c97bc365f3fd, type: 2}
+  - {fileID: 2100000, guid: 10cb38c6ddaa9824e979edcfc32da16f, type: 2}
+  - {fileID: 2100000, guid: 74becf7900def734db8e16595c3fa391, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
