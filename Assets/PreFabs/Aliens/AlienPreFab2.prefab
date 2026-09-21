@@ -1943,6 +1943,7 @@ GameObject:
   - component: {fileID: 7871398049546660810}
   - component: {fileID: 2452223002621228232}
   - component: {fileID: 2226571451630212829}
+  - component: {fileID: 7452875594758732573}
   m_Layer: 0
   m_Name: AlienPreFab2
   m_TagString: Untagged
@@ -2023,6 +2024,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7452875594758732573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442515460285276942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b154be6a30fed424baa71a035293659f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogScript: {fileID: 1878829294841141922}
 --- !u!1 &5562394545421289009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,7 +2600,7 @@ MonoBehaviour:
     lines:
     - sentence: aww
       duration: 3
-  dialogueText: {fileID: 0}
+  dialogueText: {fileID: 8477630229210991727}
 --- !u!1 &6927996069092814274
 GameObject:
   m_ObjectHideFlags: 0

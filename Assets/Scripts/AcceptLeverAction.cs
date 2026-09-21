@@ -35,6 +35,7 @@ public class AcceptLeverAction : MonoBehaviour
         Debug.Log("Other enter: " + other.tag);
         if (other.CompareTag("GameController") && cooldown)
         {
+            cooldown = false;
             ActivateLever();
         }
     }
@@ -50,7 +51,6 @@ public class AcceptLeverAction : MonoBehaviour
 
     private void ActivateLever()
     {
-        cooldown = false;
 
         anim.SetTrigger("Pull lever");
         activate.ActivateAcceptLever();
