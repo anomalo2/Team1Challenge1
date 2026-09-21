@@ -16,6 +16,7 @@ public class SyncDirectorCS : MonoBehaviour
     [SerializeField] private DenyLeverCS denyLever;
     [SerializeField] private DenyLightCS denyLight;
 
+    [SerializeField] private IdHandler idHandler;
     [SerializeField] private Lase laserVisual;
 
     private GameObject vehicleInstance;
@@ -48,7 +49,13 @@ public class SyncDirectorCS : MonoBehaviour
 
     public void arriveNotification()
     {
-        if ( arrived == false) { arrived = true;  acptLight.TurnOFF(); denyLight.TurnOFF(); }
+        if ( arrived == false) 
+        { 
+            arrived = true;  
+            acptLight.TurnOFF(); 
+            denyLight.TurnOFF(); 
+            idHandler.displayModel(vehicleCS.id);
+        }
     }
 
     public void decideNotification()
@@ -147,6 +154,7 @@ public class SyncDirectorCS : MonoBehaviour
 
         acptLever.reset();
         denyLever.reset();
+        idHandler.reset();
     }
 
     IEnumerator acceptSequence()

@@ -544,7 +544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Placeholder
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 70f6284f3f1a8af4a958db92ce5c76c7, type: 2}
   m_sharedMaterial: {fileID: -4966145841346552059, guid: 70f6284f3f1a8af4a958db92ce5c76c7, type: 2}
@@ -2625,7 +2625,7 @@ MonoBehaviour:
     - sentence: aww
       duration: 3
   dialogueText: {fileID: 8477630229210991727}
-  isTaliking: 0
+  isTalking: 0
   headAnimator: {fileID: 5406966979194885573}
 --- !u!95 &5406966979194885573
 Animator:
