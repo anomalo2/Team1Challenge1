@@ -49,6 +49,6 @@ public class DialogActor : MonoBehaviour
 
         dialogueText.text = "";
         dialogueCoroutine = null;
-        isTaliking = true;
+        isTaliking = false;
     }
 }

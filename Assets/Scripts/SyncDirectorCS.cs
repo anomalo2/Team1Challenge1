@@ -151,7 +151,7 @@ public class SyncDirectorCS : MonoBehaviour
         vehicleCS.speak(1);
         while( vehicleCS.isSpeaking() ) { yield return null;  }
         
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
 
         vehicleInstance.transform.rotation = Quaternion.Euler(0f, 0f, 7.5f);
         vehicleCS.go();
@@ -169,7 +169,10 @@ public class SyncDirectorCS : MonoBehaviour
         vehicleCS.speak(1);
         while( vehicleCS.isSpeaking() ) { yield return null;  }
 
-        yield return new WaitForSeconds(3f);
+        // ADD LASER TRIGGER HERE
+
+        // EDIT THE WAIT SECONDS so car during the laser animation
+        yield return new WaitForSeconds(5f);
         vehicleCS.terminate();
 
         verdict = "reject"; 

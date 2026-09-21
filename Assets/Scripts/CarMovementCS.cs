@@ -15,6 +15,7 @@ public class CarMovementCS : MonoBehaviour
     [SerializeField] private GameObject targetPoint;
 
     [SerializeField] private float speed = 3f;
+    private bool spoken = false;
 
     public int id;
 
@@ -42,7 +43,7 @@ public class CarMovementCS : MonoBehaviour
 
             if ((targetPosition == stopPoint.transform.position))
             {
-                speak(0);
+                if ( !spoken ) { speak(0); spoken = true; }
                 if ( !isSpeaking() ) { syncDirector.arriveNotification(); }
             }    
             
@@ -85,7 +86,11 @@ public class CarMovementCS : MonoBehaviour
 
     public bool isSpeaking() { return dialogCS.isTaliking; }
 
-    public void speak(int condition) { dialogCS.TriggerDialogue(condition); }
+    public void speak(int condition) 
+    { 
+        // ADD HEAD TURN TRIGGER HERE
+        dialogCS.TriggerDialogue(condition); 
+    }
 
     public void go() { targetPosition = targetPoint.transform.position; }
 
