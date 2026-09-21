@@ -12,11 +12,11 @@ public class DialogActor : MonoBehaviour
 
     private Coroutine dialogueCoroutine;
 
-    public void Start()
-    {
-        // DONT LEAVE THIS
-        TriggerDialogue(0); // example
-    }
+    //public void Start()
+    //{
+    //    // DONT LEAVE THIS
+    //    TriggerDialogue(0); // example
+    //}
 
     public void TriggerDialogue(int diaNum)
     {
