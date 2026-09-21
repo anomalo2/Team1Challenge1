@@ -11,6 +11,8 @@ public class DialogActor : MonoBehaviour
     public TMP_Text dialogueText;
     public bool isTaliking = false;
 
+    public Animator headAnimator;
+
     private Coroutine dialogueCoroutine;
 
     public void Start()
@@ -21,6 +23,7 @@ public class DialogActor : MonoBehaviour
 
     public void TriggerDialogue(int diaNum)
     {
+        headAnimator.SetTrigger("turn");
         Dialogue dialogue;
         if (diaNum == 0) { dialogue = normal; }
         else if (diaNum == 1) { dialogue = accept; }
