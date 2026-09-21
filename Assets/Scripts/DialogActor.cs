@@ -9,7 +9,7 @@ public class DialogActor : MonoBehaviour
     public Dialogue deny;
 
     public TMP_Text dialogueText;
-    public bool isTaliking = false;
+    public bool isTalking = false;
 
     public Animator headAnimator;
 
@@ -35,7 +35,7 @@ public class DialogActor : MonoBehaviour
 
         if (dialogue != null) 
         { 
-            isTaliking = true;
+            isTalking = true;
             dialogueCoroutine = StartCoroutine(PlayDialogue(dialogue));
         }
 
@@ -52,6 +52,6 @@ public class DialogActor : MonoBehaviour
 
         dialogueText.text = "";
         dialogueCoroutine = null;
-        isTaliking = false;
+        isTalking = false;
     }
 }

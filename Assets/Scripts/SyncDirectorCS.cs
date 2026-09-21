@@ -72,7 +72,6 @@ public class SyncDirectorCS : MonoBehaviour
     void rejectCondition()
     {
         StartCoroutine(rejectSequence());
-        vehicleCS.speak(2);
     }
 
 
@@ -166,13 +165,13 @@ public class SyncDirectorCS : MonoBehaviour
 
     IEnumerator rejectSequence()
     {
-        vehicleCS.speak(1);
+        vehicleCS.speak(2);
         while( vehicleCS.isSpeaking() ) { yield return null;  }
 
         // ADD LASER TRIGGER HERE
 
         // EDIT THE WAIT SECONDS so car during the laser animation
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
         vehicleCS.terminate();
 
         verdict = "reject"; 
