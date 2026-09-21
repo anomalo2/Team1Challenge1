@@ -19,12 +19,12 @@ public class SyncDirectorCS : MonoBehaviour
     [SerializeField] private IdHandler idHandler;
     [SerializeField] private signHandler signHandler;
     [SerializeField] private Lase laserVisual;
+    [SerializeField] private OpenBarrier barrier;
     
     private GameObject vehicleInstance;
     private CarMovementCS vehicleCS;
 
     private Coroutine pauseCoroutine;
-    private int count_max = 10;
 
     public bool consolePowered = false;
     public bool arrived = false;
