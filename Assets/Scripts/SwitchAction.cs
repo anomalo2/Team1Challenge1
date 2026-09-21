@@ -5,6 +5,9 @@ public class SwitchAction : MonoBehaviour
     public Animator anim;
     public OnSwitchCS activate;
 
+    public GameObject Open;
+    public GameObject Close;
+
     private bool cooldown = true;
 
     private void OnEnable()
@@ -54,5 +57,8 @@ public class SwitchAction : MonoBehaviour
 
         anim.SetTrigger("Press");
         activate.ActivateSwitch();
+
+        Close.SetActive(false);
+        Open.SetActive(true);
     }
 }
