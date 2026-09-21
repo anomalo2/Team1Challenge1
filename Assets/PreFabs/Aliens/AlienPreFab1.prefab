@@ -2204,6 +2204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4096083843179466079}
+  - component: {fileID: 2615349807872562078}
   m_Layer: 0
   m_Name: Alien2 (1)
   m_TagString: Untagged
@@ -2229,6 +2230,28 @@ Transform:
   - {fileID: 5917675209503739868}
   m_Father: {fileID: 4088470998520058795}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2615349807872562078
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3716567147730540517}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: daee43ea39af3fa41b40642d2b621d4b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3883898895068635645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3989,7 +4012,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: -0.268, y: -0.176, z: 0.559}
-  m_LocalScale: {x: 70, y: 70, z: 70}
+  m_LocalScale: {x: 60, y: 60, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4088470998520058795}
@@ -4106,8 +4129,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 580d43634affbab41bf6360fb9b4c457, type: 3}
-  - {fileID: -3846018093981099296, guid: 580d43634affbab41bf6360fb9b4c457, type: 3}
+  - {fileID: 2100000, guid: 2db3517c9d848b94e87b14ea53bd55a1, type: 2}
+  - {fileID: 2100000, guid: 440fd222f0e73a249aae6b772da00e65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
