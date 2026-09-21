@@ -17,8 +17,9 @@ public class SyncDirectorCS : MonoBehaviour
     [SerializeField] private DenyLightCS denyLight;
 
     [SerializeField] private IdHandler idHandler;
+    [SerializeField] private signHandler signHandler;
     [SerializeField] private Lase laserVisual;
-
+    
     private GameObject vehicleInstance;
     private CarMovementCS vehicleCS;
 
@@ -42,6 +43,7 @@ public class SyncDirectorCS : MonoBehaviour
     {
         if ( consolePowered == false ) 
         { 
+            signHandler.TurnON(); 
             spawnVehicle(); 
             consolePowered = true;
         }
