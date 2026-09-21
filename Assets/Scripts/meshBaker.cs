@@ -28,12 +28,13 @@ public class meshBaker : MonoBehaviour
         AssetDatabase.CreateAsset(bakedMesh, path);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
+
+        Debug.Log("Baked mesh saved to: " + path);
 #endif
 
         // Assign the saved mesh
         meshFilter.sharedMesh = bakedMesh;
         meshRenderer.sharedMaterials = skinnedRenderer.sharedMaterials;
 
-        Debug.Log("Baked mesh saved to: " + path);
     }
     }
