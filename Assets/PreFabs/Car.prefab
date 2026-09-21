@@ -1692,8 +1692,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Placeholder
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 70f6284f3f1a8af4a958db92ce5c76c7, type: 2}
+  m_sharedMaterial: {fileID: -4966145841346552059, guid: 70f6284f3f1a8af4a958db92ce5c76c7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1994,6 +1994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cad28f3da1e1d4cbea01849eb41d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alienPreFabs: []
   alien1: {fileID: 1589359579513668903}
   alien2: {fileID: 2410241974528926089}
   car1: {fileID: 64996712726149677}

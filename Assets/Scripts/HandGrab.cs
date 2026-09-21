@@ -7,6 +7,8 @@ public class HandGrab : MonoBehaviour
     public InputActionReference grabRight;
 
     public Animator handAnim;
+    public AudioSource leftsource;
+    public AudioSource rightsource;
 
     private void Awake()
     {
@@ -23,6 +25,7 @@ public class HandGrab : MonoBehaviour
     private void LeftGrab(InputAction.CallbackContext context)
     {
         handAnim.SetBool("LeftGrab", true);
+        leftsource.Play();
     }
     private void LeftGrabStop(InputAction.CallbackContext context)
     {
@@ -32,6 +35,7 @@ public class HandGrab : MonoBehaviour
     private void RightGrab(InputAction.CallbackContext context)
     {
         handAnim.SetBool("rGrab", true);
+        rightsource.Play();
     }
 
     private void RightGrabStop(InputAction.CallbackContext context)
