@@ -3167,7 +3167,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174792490}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a3d965674d1e8640b87274aec6f4fca, type: 3}
   m_Name: 
@@ -3771,7 +3771,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1302478746
@@ -4193,8 +4193,8 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 0020ba63b3e849541b3179c7c7ff38a1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.05
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4295,8 +4295,8 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 0020ba63b3e849541b3179c7c7ff38a1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.05
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -7808,6 +7808,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7724939528177351577, guid: 0ddb24cfd152df94c83d8e7d7362da28, type: 3}
+      propertyPath: Open
+      value: 
+      objectReference: {fileID: 1256214085}
+    - target: {fileID: 7724939528177351577, guid: 0ddb24cfd152df94c83d8e7d7362da28, type: 3}
+      propertyPath: Close
+      value: 
+      objectReference: {fileID: 1302478743}
     - target: {fileID: 7724939528177351577, guid: 0ddb24cfd152df94c83d8e7d7362da28, type: 3}
       propertyPath: activate
       value: 

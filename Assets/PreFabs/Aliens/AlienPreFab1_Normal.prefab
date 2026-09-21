@@ -2603,7 +2603,7 @@ MonoBehaviour:
       duration: 3
   dialogueText: {fileID: 8477630229210991727}
   isTaliking: 0
-  headAnimator: {fileID: 0}
+  headAnimator: {fileID: 5406966979194885573}
 --- !u!95 &5406966979194885573
 Animator:
   serializedVersion: 7
