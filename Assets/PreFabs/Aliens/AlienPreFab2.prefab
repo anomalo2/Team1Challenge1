@@ -2591,16 +2591,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normal:
     lines:
-    - sentence: Hey There
-      duration: 3
+    - sentence: Good Afternoon!
+      duration: 1
+    - sentence: The weather, right? Jupiter's supposed to storm all next week.
+      duration: 4
+    - sentence: Not that I care. I'm on vacation!
+      duration: 2
   accept:
     lines:
-    - sentence: Yipee
-      duration: 3
+    - sentence: Phew!
+      duration: 0.5
   deny:
     lines:
-    - sentence: Aww
-      duration: 3
+    - sentence: AHHHHH!
+      duration: 0.5
   dialogueText: {fileID: 8477630229210991727}
   isTalking: 0
   headAnimator: {fileID: 2700723076461458714}
@@ -2942,7 +2946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0079856515, y: -0.012414694}
+  m_AnchoredPosition: {x: 0.0079856515, y: -0.00277}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &839995653460751766

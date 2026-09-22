@@ -2614,16 +2614,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normal:
     lines:
-    - sentence: Howdy
+    - sentence: I don't have all day.
       duration: 3
   accept:
     lines:
-    - sentence: Yee Haw
+    - sentence: About time!
+      duration: 1
+    - sentence: I've got to get to Centauri by 300:00!
       duration: 3
   deny:
     lines:
-    - sentence: Dag Nabbit
-      duration: 3
+    - sentence: I think there's been a misunderstanding!
+      duration: 2
   dialogueText: {fileID: 8477630229210991727}
   isTalking: 0
   headAnimator: {fileID: 5406966979194885573}
@@ -2965,7 +2967,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0079856515, y: -0.012414694}
+  m_AnchoredPosition: {x: 0.0079856515, y: -0.00156}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &839995653460751766

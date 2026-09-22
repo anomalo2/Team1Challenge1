@@ -18,6 +18,6 @@ public class Lase : MonoBehaviour
 
         // audio
         source.GetComponent<AudioSource>();
-        source.PlayDelayed(0.2f);
+        source.PlayDelayed(0.5f);
     }
 }

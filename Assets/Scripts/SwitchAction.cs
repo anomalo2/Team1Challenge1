@@ -58,7 +58,7 @@ public class SwitchAction : MonoBehaviour
         anim.SetTrigger("Press");
         activate.ActivateSwitch();
 
-        Close.SetActive(false);
-        Open.SetActive(true);
+        //Close.SetActive(false);
+        //Open.SetActive(true);
     }
 }

@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 76057175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.344, y: 0, z: -0.174}
+  m_LocalPosition: {x: 0.344, y: 0, z: 0.005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3528,7 +3528,7 @@ MonoBehaviour:
   idHandler: {fileID: 467815868}
   signHandler: {fileID: 153380014}
   laserVisual: {fileID: 5832268650376758644}
-  barrier: {fileID: 0}
+  barrier: {fileID: 1347369726}
   consolePowered: 0
   arrived: 0
   decision: 0
@@ -4313,6 +4313,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1347369726 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5462549692481431140, guid: 32ce921f9ed2e564788b01b6f324a620, type: 3}
+  m_PrefabInstance: {fileID: 9022840347863647013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630b977322138144a926b62b6f9f0c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1348995496
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,7 +4384,7 @@ Transform:
   m_GameObject: {fileID: 1353196405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.915, y: -0.648, z: -0.17400002}
+  m_LocalPosition: {x: -1.22, y: -0.648, z: 0.007}
   m_LocalScale: {x: 0.4, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5015,7 +5026,7 @@ Transform:
   m_GameObject: {fileID: 1591740917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.875}
+  m_LocalPosition: {x: 0, y: 0, z: -0.806}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7838,6 +7849,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5887889908287804151, guid: 47ca8eb48ac1f344ca94aee93037934c, type: 3}
+      propertyPath: m_Volume
+      value: 0.239
+      objectReference: {fileID: 0}
     - target: {fileID: 7317284437079315002, guid: 47ca8eb48ac1f344ca94aee93037934c, type: 3}
       propertyPath: syncDirector
       value: 
@@ -7852,7 +7867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7893794522004260244, guid: 47ca8eb48ac1f344ca94aee93037934c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.1406255
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 7893794522004260244, guid: 47ca8eb48ac1f344ca94aee93037934c, type: 3}
       propertyPath: m_LocalRotation.w

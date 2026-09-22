@@ -9,16 +9,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: normal.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: deny.lines.Array.data[0].duration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
       propertyPath: deny.lines.Array.data[0].sentence
-      value: Well Goodbye
+      value: AHHHHH!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: accept.lines.Array.data[0].duration
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
       propertyPath: accept.lines.Array.data[0].sentence
-      value: Thank You
+      value: Phew!
       objectReference: {fileID: 0}
     - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
       propertyPath: normal.lines.Array.data[0].sentence
-      value: Good Afternoon
+      value: Good Afternoon!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: normal.lines.Array.data[1].duration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: normal.lines.Array.data[1].sentence
+      value: The weather, right? Jupiter's supposed to storm all next week.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: normal.lines.Array.data[2].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: normal.lines.Array.data[2].sentence
+      value: Not that I care. I'm on vacation!
       objectReference: {fileID: 0}
     - target: {fileID: 2226571451630212829, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -40,10 +72,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 57ec689f0a04ff746a33f755ae44697a, type: 2}
+    - target: {fileID: 6739510762250667101, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0002
+      objectReference: {fileID: 0}
     - target: {fileID: 7452875594758732573, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
-      propertyPath: dialog_script
+      propertyPath: dialogScript
       value: 
-      objectReference: {fileID: 6644488699804653872}
+      objectReference: {fileID: 2312349849729657652}
     - target: {fileID: 7871398049546660810, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.268
@@ -124,40 +160,64 @@ PrefabInstance:
       propertyPath: 'm_BlendShapeWeights.Array.data[8]'
       value: 51.9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5442515460285276942, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8141811237787963264}
+    - targetCorrespondingSourceObject: {fileID: 6612740611748143816, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 2312349849729657652}
   m_SourcePrefab: {fileID: 100100000, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
---- !u!1 &981983691843477660 stripped
+--- !u!1 &2153330310784393562 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 5442515460285276942, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6612740611748143816, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
   m_PrefabInstance: {fileID: 5055015766922789778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8141811237787963264
+--- !u!114 &2312349849729657652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981983691843477660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b154be6a30fed424baa71a035293659f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogScript: {fileID: 0}
---- !u!114 &6644488699804653872 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1878829294841141922, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
-  m_PrefabInstance: {fileID: 5055015766922789778}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2153330310784393562}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1f064a08bddb3d478cc24148998e1e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal:
+    lines:
+    - sentence: Heya Pal!
+      duration: 1
+    - sentence: You seem like you could use a new 4D yardstick!
+      duration: 4
+    - sentence: Just let me through...
+      duration: 2
+  accept:
+    lines:
+    - sentence: See ya Pal!
+      duration: 1
+  deny:
+    lines:
+    - sentence: At least let me leave you my card!
+      duration: 1
+  dialogueText: {fileID: 3711407857658400765}
+  isTalking: 0
+  headAnimator: {fileID: 7160128960561542792}
+--- !u!114 &3711407857658400765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8477630229210991727, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+  m_PrefabInstance: {fileID: 5055015766922789778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &7160128960561542792 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2700723076461458714, guid: b3bfcaacb389b0b40981423cb8e824b0, type: 3}
+  m_PrefabInstance: {fileID: 5055015766922789778}
+  m_PrefabAsset: {fileID: 0}
