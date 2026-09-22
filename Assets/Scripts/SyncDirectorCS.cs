@@ -18,6 +18,8 @@ public class SyncDirectorCS : MonoBehaviour
 
     [SerializeField] private IdHandler idHandler;
     [SerializeField] private signHandler signHandler;
+    [SerializeField] private VerdictDisplay verdictVisual;
+
     [SerializeField] private Lase laserVisual;
     [SerializeField] private OpenBarrier barrier;
     
@@ -44,6 +46,7 @@ public class SyncDirectorCS : MonoBehaviour
         if ( consolePowered == false ) 
         { 
             signHandler.TurnON(); 
+            verdictVisual.displayHold();
             spawnVehicle(); 
             consolePowered = true;
         }
@@ -157,11 +160,12 @@ public class SyncDirectorCS : MonoBehaviour
         acptLever.reset();
         denyLever.reset();
         idHandler.reset();
+        verdictVisual.reset();
     }
 
     IEnumerator acceptSequence()
     {
-
+        verdictVisual.displayAccept();
         vehicleCS.speak(1);
         while( vehicleCS.isSpeaking() ) { yield return null;  }
         
@@ -180,6 +184,7 @@ public class SyncDirectorCS : MonoBehaviour
 
     IEnumerator rejectSequence()
     {
+        verdictVisual.displayDeny();
         vehicleCS.speak(2);
         while( vehicleCS.isSpeaking() ) { yield return null;  }
 
@@ -187,7 +192,7 @@ public class SyncDirectorCS : MonoBehaviour
 
         // EDIT THE WAIT SECONDS so car during the laser animation
         laserVisual.TriggerLaser();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.15f);
         vehicleCS.terminate();
 
         verdict = "reject"; 
