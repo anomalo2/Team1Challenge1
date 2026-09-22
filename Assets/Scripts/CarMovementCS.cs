@@ -15,6 +15,7 @@ public class CarMovementCS : MonoBehaviour
     [SerializeField] private GameObject targetPoint;
 
     [SerializeField] private float speed = 3f;
+    private bool sensed = false;
     private bool spoken = false;
 
     public int id;
@@ -37,7 +38,8 @@ public class CarMovementCS : MonoBehaviour
         {
             // Snap to target position.
 
-            transform.position = targetPosition; 
+            transform.position = targetPosition;
+            if ( !sensed ) { syncDirector.verdictVisual.reset(); sensed = true; } 
 
             // IF at StopPoint halt until manager gives a verdict.
 

@@ -18,7 +18,7 @@ public class SyncDirectorCS : MonoBehaviour
 
     [SerializeField] private IdHandler idHandler;
     [SerializeField] private signHandler signHandler;
-    [SerializeField] private VerdictDisplay verdictVisual;
+    [SerializeField] public VerdictDisplay verdictVisual;
 
     [SerializeField] private Lase laserVisual;
     [SerializeField] private OpenBarrier barrier;
@@ -60,6 +60,7 @@ public class SyncDirectorCS : MonoBehaviour
             acptLight.TurnOFF(); 
             denyLight.TurnOFF(); 
             idHandler.displayModel(vehicleCS.id);
+            verdictVisual.reset();
         }
     }
 
@@ -160,7 +161,6 @@ public class SyncDirectorCS : MonoBehaviour
         acptLever.reset();
         denyLever.reset();
         idHandler.reset();
-        verdictVisual.reset();
     }
 
     IEnumerator acceptSequence()
