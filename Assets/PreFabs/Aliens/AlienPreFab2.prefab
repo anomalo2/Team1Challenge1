@@ -2591,15 +2591,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normal:
     lines:
-    - sentence: Good afternoon
+    - sentence: Hey There
       duration: 3
   accept:
     lines:
-    - sentence: yipee
+    - sentence: Yipee
       duration: 3
   deny:
     lines:
-    - sentence: aww
+    - sentence: Aww
       duration: 3
   dialogueText: {fileID: 8477630229210991727}
   isTalking: 0
