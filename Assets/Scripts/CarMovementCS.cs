@@ -39,7 +39,12 @@ public class CarMovementCS : MonoBehaviour
             // Snap to target position.
 
             transform.position = targetPosition;
-            if ( !sensed ) { syncDirector.verdictVisual.reset(); sensed = true; } 
+            if ( !sensed ) 
+            { 
+                syncDirector.verdictVisual.reset(); 
+                syncDirector.barrier.closeBarrier();
+                sensed = true; 
+            } 
 
             // IF at StopPoint halt until manager gives a verdict.
 

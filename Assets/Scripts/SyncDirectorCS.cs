@@ -21,7 +21,7 @@ public class SyncDirectorCS : MonoBehaviour
     [SerializeField] public VerdictDisplay verdictVisual;
 
     [SerializeField] private Lase laserVisual;
-    [SerializeField] private OpenBarrier barrier;
+    [SerializeField] public OpenBarrier barrier;
     
     private GameObject vehicleInstance;
     private CarMovementCS vehicleCS;
@@ -166,6 +166,8 @@ public class SyncDirectorCS : MonoBehaviour
     IEnumerator acceptSequence()
     {
         verdictVisual.displayAccept();
+        barrier.openBarrier();
+
         vehicleCS.speak(1);
         while( vehicleCS.isSpeaking() ) { yield return null;  }
         
